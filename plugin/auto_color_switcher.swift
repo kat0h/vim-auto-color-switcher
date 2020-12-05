@@ -26,6 +26,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
 }
 
+print(UserDefaults.standard.string(forKey: "AppleInterfaceStyle") ?? "Light")
+fflush(stdout)
 let delegate = AppDelegate()
 app.delegate = delegate
 app.run()
