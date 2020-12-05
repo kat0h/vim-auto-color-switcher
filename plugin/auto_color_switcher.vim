@@ -20,7 +20,8 @@ function! s:CallBack(ch, msg)
   redraw
 endfunction
 
-let job = job_start(s:exe, {"out_cb": function('s:CallBack')})
+" s:jobはデバグ用です
+let s:job = job_start(s:exe, {"out_cb": function('s:CallBack')})
 
 let g:loaded_auto_color_switcher = 1
 let &cpo = s:save_cpo
