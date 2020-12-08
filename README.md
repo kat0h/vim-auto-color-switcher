@@ -16,7 +16,7 @@ backgroundの変更に対応しないカラースキームを考慮していま�
 
 # Information
 Ubuntu等のLinuxには対応しません。  
-UbunutuのダークモードはGNOMEの一Themeとして管理されているの扱いが困難なためです。
+UbunutuのダークモードはGNOMEの一Themeとして管理されているので扱いが困難なためです。  
 
 # LICENSE
 MIT
