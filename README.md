@@ -10,6 +10,14 @@ macOS/Windowsのカラーテーマに合わせてVimのbackgroundを切り替え
 vimrcなどに  
 `let g:auto_color_switcher#binary_path=expand('バイナリのパス')`と記述すれば、Vimの起動時に読み込まれます。  
 
+`background`に対応しないカラースキームの場合、下記のような設定を登録することで外観モード変更時に実行されるコマンドを上書きできます。
+```
+let g:auto_color_switcher#command={
+    \ 'light': 'colorscheme xcodelight',
+    \ 'dark' : 'colorscheme xcodedark'
+    \}
+```
+
 # problem
 backgroundの変更に対応しないカラースキームを考慮していません。 
 また、Windowsは頻繁にレジストリの内容を取得しているので、HDD/SSDに悪影響を及ぼす可能性があります。（多分大丈夫ですが）  
