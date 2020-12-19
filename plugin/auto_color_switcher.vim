@@ -5,7 +5,7 @@ if exists('g:loaded_auto_color_switcher')
   finish
 endif
 
-if exists('g:auto_color_switcher_binary_path')
+if exists('g:auto_color_switcher#binary_path')
   let s:exe = g:auto_color_switcher_binary_path
 else
   echo "couldn't find binary"
