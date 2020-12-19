@@ -16,8 +16,11 @@ endif
 if exists('g:auto_color_switcher#binary_path')
   let s:exe = g:auto_color_switcher#binary_path
 else
-  echo "auto_color_switcher : couldn't find binary"
-  finish
+  let s:exe = expand('<sfile>:p:h:h')..'/bin/auto_color_switcher'
+  if s:exe == expand('<sfile>:p:h:h')
+    echo "auto_color_switcher : couldn't find binary"
+    finish
+  endif
 endif
 
 if exists('g:auto_color_switcher#command')
@@ -27,6 +30,7 @@ else
         \ 'dark' : 'set background=dark'
         \}
 endif
+
 
 function! s:CallBack(ch, msg)
   if g:auto_color_switcher#disable == v:true
