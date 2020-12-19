@@ -18,6 +18,14 @@ let g:auto_color_switcher#command={
     \}
 ```
 
+macOS以外で動作を止めたいというような時は
+```
+if !has('mac')
+    let g:auto_color_switcher = v:false
+endif
+などのように設定してください
+```
+
 # problem
 backgroundの変更に対応しないカラースキームを考慮していません。 
 また、Windowsは頻繁にレジストリの内容を取得しているので、HDD/SSDに悪影響を及ぼす可能性があります。（多分大丈夫ですが）  

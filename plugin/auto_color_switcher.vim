@@ -5,6 +5,14 @@ if exists('g:loaded_auto_color_switcher')
   finish
 endif
 
+if exists('g:auto_color_switcher#disable')
+  if g:auto_color_switcher#disable == v:true
+    finish
+  endif
+else
+  let g:auto_color_switcher#disable = v:false
+endif
+
 if exists('g:auto_color_switcher#binary_path')
   let s:exe = g:auto_color_switcher#binary_path
 else
@@ -21,6 +29,9 @@ else
 endif
 
 function! s:CallBack(ch, msg)
+  if g:auto_color_switcher#disable == v:true
+    return
+  endif
   if a:msg == "light"
     call execute(g:auto_color_switcher#command['light'])
   else
