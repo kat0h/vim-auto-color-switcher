@@ -19,9 +19,9 @@ class ObserveColorMode {
 }
 
 let app = NSApplication.shared
+let observer = ObserveColorMode.init()
 class AppDelegate: NSObject, NSApplicationDelegate {
     func applicationDidFinishLaunching(_ notification: Notification) {
-        let observer = ObserveColorMode.init()
         observer.observe()
     }
 }
