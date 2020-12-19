@@ -17,6 +17,7 @@ if exists('g:auto_color_switcher#binary_path')
   let s:exe = g:auto_color_switcher#binary_path
 else
   let s:exe = expand('<sfile>:p:h:h')..'/bin/auto_color_switcher'
+  echo s:exe
   if s:exe == expand('<sfile>:p:h:h')
     echo "auto_color_switcher : couldn't find binary"
     finish
