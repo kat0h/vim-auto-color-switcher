@@ -8,6 +8,7 @@ endif
 if exists('g:auto_color_switcher_binary_path')
   let s:exe = g:auto_color_switcher_binary_path
 else
+  echo "couldn't find binary"
   finish
 endif
 
