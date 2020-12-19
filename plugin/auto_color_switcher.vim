@@ -12,11 +12,19 @@ else
   finish
 endif
 
+if exists('g:auto_color_switcher#command')
+else
+  let g:auto_color_switcher#command = {
+        \ 'light': 'set background=light',
+        \ 'dark' : 'set background=dark'
+        \}
+endif
+
 function! s:CallBack(ch, msg)
   if a:msg == "light"
-    set background=light
+    call execute(g:auto_color_switcher#command['light'])
   else
-    set background=dark
+    call execute(g:auto_color_switcher#command['dark'])
   endif
   redraw
 endfunction
