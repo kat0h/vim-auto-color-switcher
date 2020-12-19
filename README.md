@@ -30,6 +30,10 @@ endif
 backgroundの変更に対応しないカラースキームを考慮していません。 
 また、Windowsは頻繁にレジストリの内容を取得しているので、HDD/SSDに悪影響を及ぼす可能性があります。（多分大丈夫ですが）  
 
+# Todo
+( ) Docment
+( ) Makefileの作成（プラグインマネージャからインストールできるように）
+
 # Information
 Ubuntu等のLinuxには対応しません。  
 UbunutuのダークモードはGNOMEの一Themeとして管理されているので扱いが困難なためです。  
