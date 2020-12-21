@@ -40,6 +40,8 @@ endif
 Ubuntu等のLinuxには対応しません。  
 UbunutuのダークモードはGNOMEの一Themeとして管理されているので扱いが困難なためです。  
 
+解説記事 [Zenn](https://zenn.dev/kato_k/articles/3f1abb1f83419e)
+
 # LICENSE
 MIT
 
