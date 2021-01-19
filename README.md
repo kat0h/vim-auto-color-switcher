@@ -6,7 +6,7 @@ macOS/Windowsのカラーテーマに合わせてVimのbackgroundを切り替え
 # Usage
 お好みのプラグインマネージャでインストールしてください。  
 
-deinやvim-plugをお使いの場合はmakeを使うように設定すると自動でバイナリを用意することができます（Macのみ）  
+> deinやvim-plugをお使いの場合はmakeを使うように設定すると自動でバイナリを用意することができます（Macのみ）  
 
 また、Releaseのバイナリを利用するか 
 `$ swiftc auto_color_switcher.swift`のようにコンパイルをすることもできます。
