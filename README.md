@@ -6,6 +6,14 @@ macOS/Windowsのカラーテーマに合わせてVimのbackgroundを切り替え
 # Usage
 お好みのプラグインマネージャでインストールしてください。  
 
+```
+[[plugins]]
+repo = 'kato-k/vim-auto-color-switcher'
+hook_post_update = '''
+let g:dein#plugin.build = 'make'
+'''
+```
+
 > deinやvim-plugをお使いの場合はmakeを使うように設定すると自動でバイナリを用意することができます（Macのみ）  
 
 また、Releaseのバイナリを利用するか 
