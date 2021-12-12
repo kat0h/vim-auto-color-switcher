@@ -44,9 +44,13 @@ function! s:CallBack(ch, msg)
   redraw
 endfunction
 
+function! s:CallBackNeoVim(j, d, e)
+  call s:CallBack(a:j, a:d[0])
+endfunction
+
 " s:jobはデバグ用です
 if has('nvim')
-  let s:job = jobstart(s:exe, {"on_stdout": {j,d -> s:CallBack(j, d[0])}})
+  let s:job = jobstart(s:exe, {"on_stdout": function('s:CallBackNeoVim')})
 else
   let s:job = job_start(s:exe, {"out_cb": function('s:CallBack')})
 endif
