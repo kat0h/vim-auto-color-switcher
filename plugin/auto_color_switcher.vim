@@ -44,8 +44,16 @@ function! s:CallBack(ch, msg)
   redraw
 endfunction
 
+function! s:CallBackNeoVim(j, d, e)
+  call s:CallBack(a:j, a:d[0])
+endfunction
+
 " s:jobはデバグ用です
-let s:job = job_start(s:exe, {"out_cb": function('s:CallBack')})
+if has('nvim')
+  let s:job = jobstart(s:exe, {"on_stdout": function('s:CallBackNeoVim')})
+else
+  let s:job = job_start(s:exe, {"out_cb": function('s:CallBack')})
+endif
 
 let g:loaded_auto_color_switcher = 1
 let &cpo = s:save_cpo
