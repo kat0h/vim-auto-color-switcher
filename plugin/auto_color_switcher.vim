@@ -36,7 +36,7 @@ function! s:CallBack(ch, msg)
   if g:auto_color_switcher#disable == v:true
     return
   endif
-  if a:msg == "light"
+  if a:msg == "Light"
     call execute(g:auto_color_switcher#command['light'])
   else
     call execute(g:auto_color_switcher#command['dark'])
