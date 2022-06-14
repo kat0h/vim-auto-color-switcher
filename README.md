@@ -9,7 +9,7 @@ Install plugin with your favorite plugin manager.
 If you are using dein.vim you can apply the following settings:
 ```
 [[plugins]]
-repo = 'kato-k/vim-auto-color-switcher'
+repo = 'kat0h/vim-auto-color-switcher'
 hook_post_update = '''
 let g:dein#plugin.build = 'make'
 '''
